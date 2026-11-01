@@ -21,7 +21,7 @@ RANDOM_SEED = 4219
 os.makedirs("model", exist_ok=True)
 
 # 1. Load attached WineQT.csv dataset
-df = pd.read_csv("test_data.csv")
+df = pd.read_csv("full_dataset.csv")
 
 # Drop arbitrary row index 'Id' and create 12th chemical feature 'total_acidity'
 if "Id" in df.columns:
@@ -98,40 +98,3 @@ results_df.to_csv("model/benchmark_results.csv", index=False)
 print("\n=== BITS VIRTUAL LAB EXECUTION: MODEL BENCHMARK ===")
 print(results_df.to_markdown(index=False))
 
-# 4. Auto-generate README.md following Step 5 rubric structure
-obs_df = pd.DataFrame([
-    {"ML Model Name": "Logistic Regression", "Observation about model performance": "Provides a strong linear baseline as alcohol and volatile acidity correlate monotonically with wine quality, but misses non-linear chemical interactions."},
-    {"ML Model Name": "Decision Tree", "Observation about model performance": "Shows lower generalization and AUC because orthogonal axis-aligned splits overfit local density and acidity thresholds."},
-    {"ML Model Name": "KNN", "Observation about model performance": "Achieves the highest AUC and Recall by weighting local neighborhoods by inverse Euclidean distance after z-score scaling."},
-    {"ML Model Name": "Naive Bayes", "Observation about model performance": "Records the lowest accuracy and MCC because correlated chemical features (fixed acidity, pH, citric acid, total_acidity) violate conditional independence."},
-    {"ML Model Name": "Support Vector Machine", "Observation about model performance": "Delivers the highest overall Accuracy, Precision, and MCC; the RBF kernel effectively separates non-linear physicochemical boundaries."},
-    {"ML Model Name": "Overall, Winner for your dataset?", "Observation about model performance": "Support Vector Machine (highest Accuracy and MCC), with KNN as a close runner-up leading in AUC and F1."}
-])
-
-readme_text = f"""# End-to-End Machine Learning Classification on WineQT Dataset
-
-## a. Problem Statement
-Build, evaluate, and deploy five supervised machine learning classification models on the Wine Quality dataset to predict whether a wine sample meets high-quality standards based on 12 physicochemical properties, and serve the pre-trained models via an interactive Streamlit web application.
-
-## b. Dataset Description
-- **Dataset Source:** Wine Quality Dataset (WineQT.csv from Kaggle / UCI Repository)
-- **Instance Size:** 1,143 instances (914 training rows, 229 held-out test rows)
-- **Feature Size:** 12 numerical input features (fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, alcohol, and engineered total_acidity; row index Id removed)
-- **Target Variable:** quality (Binary classification: 1 for Good Quality >= 6, 0 for Standard Quality < 6)
-
-## c. GitHub Repository Link
-- **GitHub Repository:** https://github.com/YOUR-USERNAME/YOUR-REPO-NAME
-- **Live Streamlit App:** https://YOUR-APP-NAME.streamlit.app
-
-## d. Models Used & Comparison Table
-
-{results_df.to_markdown(index=False)}
-
-## Observations on Model Performance
-
-{obs_df.to_markdown(index=False)}
-"""
-
-with open("README.md", "w", encoding="utf-8") as f:
-    f.write(readme_text)
-print("\nGenerated README.md successfully.")
