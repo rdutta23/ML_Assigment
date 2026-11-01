@@ -10,8 +10,8 @@ Build, evaluate, and deploy five supervised machine learning classification mode
 - **Target Variable:** quality (Binary classification: 1 for Good Quality >= 6, 0 for Standard Quality < 6)
 
 ## c. GitHub Repository Link
-- **GitHub Repository:** https://github.com/YOUR-USERNAME/YOUR-REPO-NAME
-- **Live Streamlit App:** https://YOUR-APP-NAME.streamlit.app
+- **GitHub Repository:** https://github.com/rdutta23/ML_Assigment
+- **Live Streamlit App:** https://mlassigment-rahuldutta2026aj05665.streamlit.app/
 
 ## d. Models Used & Comparison Table
 
