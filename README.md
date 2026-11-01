@@ -4,7 +4,7 @@
 Build, evaluate, and deploy five supervised machine learning classification models on the Wine Quality dataset to predict whether a wine sample meets high-quality standards based on 12 physicochemical properties, and serve the pre-trained models via an interactive Streamlit web application.
 
 ## b. Dataset Description
-- **Dataset Source:** Wine Quality Dataset (test_data.csv from Kaggle / UCI Repository)
+- **Dataset Source:** Wine Quality Dataset (WineQT.csv from Kaggle / UCI Repository)
 - **Instance Size:** 1,143 instances (914 training rows, 229 held-out test rows)
 - **Feature Size:** 12 numerical input features (fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, alcohol, and engineered total_acidity; row index Id removed)
 - **Target Variable:** quality (Binary classification: 1 for Good Quality >= 6, 0 for Standard Quality < 6)
