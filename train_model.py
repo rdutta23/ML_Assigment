@@ -21,7 +21,7 @@ RANDOM_SEED = 4219
 os.makedirs("model", exist_ok=True)
 
 # 1. Load attached WineQT.csv dataset
-df = pd.read_csv("full_dataset.csv")
+df = pd.read_csv("training_data/full_dataset.csv")
 
 # Drop arbitrary row index 'Id' and create 12th chemical feature 'total_acidity'
 if "Id" in df.columns:
