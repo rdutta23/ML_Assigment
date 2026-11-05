@@ -1,8 +1,6 @@
 streamlit
 scikit-learn
-numpy
+Numpy
 pandas
 matplotlib
 seaborn
-joblib
-tabulate
