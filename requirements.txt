@@ -4,3 +4,5 @@ Numpy
 pandas
 matplotlib
 seaborn
+joblib
+tabulate
