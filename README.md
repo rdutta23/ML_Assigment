@@ -17,11 +17,11 @@ Build, evaluate, and deploy five supervised machine learning classification mode
 
 | ML Model Name          |   Accuracy |    AUC |   Precision |   Recall |     F1 |    MCC |
 |:-----------------------|-----------:|-------:|------------:|---------:|-------:|-------:|
-| Logistic Regression    |     0.7511 | 0.828  |      0.7597 |   0.7903 | 0.7747 | 0.4974 |
-| Decision Tree          |     0.738  | 0.7785 |      0.754  |   0.7661 | 0.76   | 0.4717 |
-| KNN                    |     0.7642 | 0.8649 |      0.7431 |   0.8629 | 0.7985 | 0.5265 |
-| Naive Bayes            |     0.7118 | 0.7904 |      0.7266 |   0.75   | 0.7381 | 0.4181 |
-| Support Vector Machine |     0.7773 | 0.8518 |      0.7874 |   0.8065 | 0.7968 | 0.5507 |
+| Logistic Regression    |     0.7904 | 0.8487 |      0.822  |   0.7823 | 0.8017 | 0.5805 |
+| Decision Tree          |     0.7467 | 0.7761 |      0.8056 |   0.7016 | 0.75   | 0.5007 |
+| KNN                    |     0.7511 | 0.8483 |      0.7445 |   0.8226 | 0.7816 | 0.4973 |
+| Naive Bayes            |     0.7336 | 0.7836 |      0.7838 |   0.7016 | 0.7404 | 0.4716 |
+| Support Vector Machine |     0.8035 | 0.8586 |      0.8319 |   0.7984 | 0.8148 | 0.6063 |
 
 ## Observations on Model Performance
 
